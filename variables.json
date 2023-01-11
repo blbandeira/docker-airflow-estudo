@@ -1,0 +1,22 @@
+{
+    "api-access-key": "<insert_api_key_here>",
+    "databricks_cluster_singleNode": {
+        "aws_attributes.availability": {
+            "type": "fixed",
+            "value": "SPOT_WITH_FALLBACK"
+        },
+        "aws_attributes.first_on_demand": {
+            "type": "fixed",
+            "value": 1
+        },
+        "driver_node_type_id": "m4.large",
+        "enable_elastic_disk": "true",
+        "node_type_id": "m4.large",
+        "num_workers": "0",
+        "spark_conf": {
+            "spark.databricks.cluster.profile": "singleNode",
+            "spark.master": "local[*, 4]"
+        },
+        "spark_version": "11.3.x-scala2.12"
+    }
+}
